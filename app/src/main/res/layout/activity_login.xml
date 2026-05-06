@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F8"> <View
+    android:id="@+id/brandStrip"
+    android:layout_width="match_parent"
+    android:layout_height="8dp"
+    android:background="#ED1C24"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/brandStrip"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="28dp"
+            android:gravity="center_horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="40dp">
+                <ImageView
+                    android:layout_width="280dp"
+                    android:layout_height="110dp"
+                    android:padding="16dp"
+                    android:background="#FFFFFF"
+                    android:src="@drawable/gplogo" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#DDE3E9"
+                app:strokeWidth="1.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ACCESS CONTROL"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="28dp"
+                        android:letterSpacing="0.2"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="User ID"
+                        app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+                        app:startIconTint="#ED1C24"
+                        app:boxStrokeColor="#ED1C24"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        android:layout_marginBottom="16dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_text_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Password"
+                        app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
+                        app:startIconTint="#ED1C24"
+                        app:passwordToggleEnabled="true"
+                        app:boxStrokeColor="#ED1C24"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        android:layout_marginBottom="28dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_text_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:textColor="#000000" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SELECT ASSIGNED GATE"
+                        android:textColor="#7F8C8D"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp"
+                        android:letterSpacing="0.1"/>
+                    <TextView
+                        android:id="@+id/error_message_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:textColor="#ED1C24"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                    <RadioGroup
+                        android:id="@+id/radioGroupLoginGate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="32dp">
+
+                        <RadioButton
+                            android:id="@+id/radioLoginGateG1"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:text="Main Gate G1"
+                            android:paddingStart="12dp"
+                            android:buttonTint="#ED1C24"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:textColor="#2C3E50"
+                            android:background="@drawable/rounded_border"
+                            android:layout_marginBottom="8dp"/>
+
+                        <RadioButton
+                            android:id="@+id/radioLoginGateG2"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:text="Side Gate G2"
+                            android:paddingStart="12dp"
+                            android:buttonTint="#ED1C24"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:textColor="#2C3E50"
+                            android:background="@drawable/rounded_border"/>
+                    </RadioGroup>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:text="Login"
+                        android:backgroundTint="#ED1C24"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        app:cornerRadius="16dp"
+                        app:elevation="8dp"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tenant_names">
+        <item>Personal Project</item>
+        <item>ACT Office</item>
+        <item>Pearl Boutique</item>
+        <item>SuzyQ Restaurant</item>
+        <item>Attica Gold</item>
+    </string-array>
+</resources>

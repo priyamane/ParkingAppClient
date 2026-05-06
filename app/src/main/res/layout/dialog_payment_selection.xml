@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="12dp"
+    android:layout_margin="16dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#E0E0E0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TOTAL PAYABLE"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvPaymentDueAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="₹ 0.00"
+            android:textSize="40sp"
+            android:textColor="#ED1C24"
+            android:gravity="center"
+            android:layout_marginBottom="32dp"/>
+
+        <LinearLayout
+            android:id="@+id/layoutPaymentSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/buttonCash"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="PAY BY CASH"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#2196F3"/>
+            <Button
+                android:id="@+id/buttonUpi"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="PAY BY UPI (SCAN)"
+                android:backgroundTint="#2E7D32"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutUpiQr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imgUpiQrCode"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/company_qr"
+                android:layout_marginBottom="16dp"/>
+            <Button
+                android:id="@+id/buttonUpiPaymentConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="CONFIRM UPI PAYMENT"
+                android:backgroundTint="#ED1C24"
+                app:cornerRadius="12dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutCashConfirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvCashAmountConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_marginBottom="16dp"/>
+            <Button
+                android:id="@+id/buttonCashConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="CONFIRM CASH COLLECTION"
+                android:backgroundTint="#ED1C24"
+                app:cornerRadius="12dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

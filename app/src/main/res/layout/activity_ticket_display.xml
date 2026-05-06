@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDF1F4">
+
+    <View
+        android:id="@+id/brandBar"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="#ED1C24"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/brandBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ENTRY TICKET GENERATED"
+            android:textColor="#546E7A"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.2"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:strokeColor="#DDE3E9"
+            app:strokeWidth="1.5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="28dp"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewQrCode"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:layout_marginBottom="24dp"
+                    android:scaleType="fitCenter"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="#F0F2F5"
+                    android:layout_marginBottom="24dp"/>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="1">
+
+                    <TableRow android:layout_marginBottom="12dp">
+                        <TextView android:text="TICKET ID:" android:textColor="#78909C" android:textSize="12sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/textViewTicketID" android:text="---" android:textColor="#1C1C1E" android:textStyle="bold" android:gravity="end"/>
+                    </TableRow>
+
+                    <TableRow android:layout_marginBottom="12dp">
+                        <TextView android:text="VEHICLE NO:" android:textColor="#78909C" android:textSize="12sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/textViewVehicle" android:text="---" android:textColor="#1C1C1E" android:textStyle="bold" android:gravity="end"/>
+                    </TableRow>
+
+                    <TableRow android:layout_marginBottom="12dp">
+                        <TextView android:text="ENTRY TIME:" android:textColor="#78909C" android:textSize="12sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/textViewEntryTime" android:text="---" android:textColor="#1C1C1E" android:gravity="end"/>
+                    </TableRow>
+
+                    <TableRow android:layout_marginBottom="12dp">
+                        <TextView android:text="VISITING:" android:textColor="#78909C" android:textSize="12sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/textViewTenant" android:text="---" android:textColor="#1C1C1E" android:gravity="end"/>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="SCAN AT EXIT GATE FOR PAYMENT"
+                    android:textColor="#ED1C24"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_print_entry_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="32dp"
+            android:text="PRINT TICKET"
+            android:textStyle="bold"
+            android:backgroundTint="#ED1C24"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_menu_slideshow"
+            app:iconGravity="textStart"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="© 2025 MY PERSONAL PROJECT"
+        android:textColor="#B0BEC5"
+        android:textSize="10sp"
+        android:letterSpacing="0.1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="24dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

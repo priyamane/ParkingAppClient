@@ -1,0 +1,58 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"> <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" android:maxSdkVersion="30" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        tools:ignore="MissingPermission" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ParkingAppClient"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name="com.example.Activity.LoginActivity" android:exported="true"
+            android:label="Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.Activity.AdminDashboardActivity"
+            android:label="Admin Dashboard" />
+
+        <activity
+            android:name="com.example.Activity.SecurityDashboardActivity"
+            android:label="Guard Dashboard" />
+
+        <activity
+            android:name="com.example.Activity.MainActivity"
+            android:label="All Data" />
+
+        <activity
+            android:name="com.example.Activity.VehicleExitActivity"
+            android:label="Vehicle Exit" />
+
+        <activity
+            android:name="com.example.Activity.VehicleEntryActivity"
+            android:label="Vehicle Entry" />
+
+        <activity
+            android:name="com.example.Activity.TicketDisplayActivity"
+            android:label="Entry Ticket" />
+
+    </application>
+</manifest>

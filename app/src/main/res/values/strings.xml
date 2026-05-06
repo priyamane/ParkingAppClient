@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">My Personal Project</string>
+    <string name="vehicle_entry_ticket_generation">Vehicle Entry (Ticket Generation)</string>
+    <string name="select_entry_gate">Select Entry Gate:</string>
+    <string name="g1">G1</string>
+    <string name="g2">G2</string>
+    <string name="vehicle_number_required">Vehicle Number (Required)</string>
+    <string name="visiting_tenant">Visiting Tenant:</string>
+    <string name="mobile_number_optional">Mobile Number (Optional)</string>
+    <string name="register_entry_amp_generate_ticket"><![CDATA[Register Entry & Generate Ticket]]></string>
+    <string name="express_parking">MY PERSONAL PROJECT</string>
+    <string name="inr_0_00">INR 0.00</string>
+    <string name="total_charges_due">Total Charges Due</string>
+    <string name="entry_time">Entry Time</string>
+    <string name="fetching_details_for">"Fetching details for "</string>
+
+</resources>
